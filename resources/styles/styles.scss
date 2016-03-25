@@ -1,9 +1,30 @@
-
+$yellow : #FEF6C9;
+$turquoise: #6C969D;
+$seafoam: #99D5C9;
+$purple: #BF9ACA;
+$grey: #878E88;
 
 .jumbotron {
   text-align: center;
+  background-color: $grey;
+  h1 {
+    color: $purple;
+  }
+}
+
+body {
+  background-color: $yellow;
 }
 
 h1 {
-  color: blue;
+  color: $turquoise;
+}
+
+.form-control {
+  background-color: $seafoam;
+  color: $yellow;
+}
+
+.editable {
+  color: $purple;
 }

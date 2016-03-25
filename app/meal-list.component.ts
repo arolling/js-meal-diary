@@ -3,6 +3,7 @@ import { Meal } from './meal.model';
 import { MealComponent } from './meal.component';
 import { AddMealComponent } from './add-meal.component';
 
+
 @Component({
   selector: 'meal-list',
   directives: [ MealComponent, AddMealComponent ],
@@ -10,7 +11,7 @@ import { AddMealComponent } from './add-meal.component';
   template: `
     <div class="row">
       <div class="col-sm-7">
-        <display-meal class="dl-horizontal" *ngFor="#currentMeal of allMeals" [meal]="currentMeal"></display-meal>
+        <display-meal class="dl-horizontal" *ngFor="#currentMeal of allMeals" [meal]="currentMeal" (click)="selectMeal(currentMeal)" [class.editable]="currentMeal === highlighted"></display-meal>
       </div>
       <div class="col-sm-5">
         <add-meal (newMeal)="addNewMeal($event)"></add-meal>
@@ -23,6 +24,11 @@ import { AddMealComponent } from './add-meal.component';
 export class MealListComponent{
   public allMeals: Meal[];
   public newDay: Date;
+  public highlighted: Meal;
+
+  constructor(){
+
+  }
 
   addNewMeal(newMealInfo: any[]){
     this.newDay = new Date(newMealInfo[4]);
@@ -30,4 +36,7 @@ export class MealListComponent{
     console.log(this.allMeals);
   }
 
+  selectMeal(clicked: Meal){
+    this.highlighted = clicked;
+  }
 }

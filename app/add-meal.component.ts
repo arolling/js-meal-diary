@@ -26,5 +26,9 @@ export class AddMealComponent{
   }
   submitNewMeal(newName: HTMLInputElement, newDetails: HTMLInputElement, newCalories: HTMLInputElement, newType: HTMLInputElement, newDay: HTMLInputElement){
     this.newMeal.emit([newName.value, newDetails.value, parseInt(newCalories.value), newType.value, newDay.value]);
+    newName.value = '';
+    newDetails.value = '';
+    newCalories.value = '';
+    newDay.value = '';
   }
 }
