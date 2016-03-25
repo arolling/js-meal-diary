@@ -6,14 +6,16 @@ import { Meal } from './meal.model';
   selector: 'display-meal',
   inputs: ['meal'],
   template: `
-    <dt>{{meal.name}}</dt>
-    <dd>Calories: {{ meal.calories }}</dd>
-    <dd>Notes: {{ meal.details }}</dd>
-    <dd>Type: {{ meal.type }}</dd>
-    <dd>Date: {{ meal.day.toDateString() }}</dd>
+
+    <p class="list-group-item-text">Calories: {{ meal.calories }}</p>
+    <p class="list-group-item-text">Notes: {{ meal.details }}</p>
+    <p class="list-group-item-text">Type: {{ meal.type }}</p>
+    <p class="list-group-item-text">Date: {{ meal.day.toDateString() }}</p>
   `
 })
 
 export class MealComponent {
+
+  constructor() {}
 
 }

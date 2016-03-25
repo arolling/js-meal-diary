@@ -11,7 +11,10 @@ import { AddMealComponent } from './add-meal.component';
   template: `
     <div class="row">
       <div class="col-sm-7">
-        <display-meal class="dl-horizontal" *ngFor="#currentMeal of allMeals" [meal]="currentMeal" (click)="selectMeal(currentMeal)" [class.editable]="currentMeal === highlighted"></display-meal>
+        <div class="list-group-item" *ngFor="#currentMeal of allMeals">
+          <h3 class="list-group-item-heading" (click)="selectMeal(currentMeal)" [class.editable]="currentMeal === highlighted">{{currentMeal.name}}</h3>
+          <display-meal [meal]="currentMeal" *ngIf="currentMeal === highlighted"></display-meal>
+        </div>
       </div>
       <div class="col-sm-5">
         <add-meal (newMeal)="addNewMeal($event)"></add-meal>
