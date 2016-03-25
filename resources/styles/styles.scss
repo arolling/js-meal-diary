@@ -10,6 +10,9 @@ $grey: #878E88;
   h1 {
     color: $purple;
   }
+  h3 {
+    color: $yellow;
+  }
 }
 
 .btn-default {
@@ -24,6 +27,7 @@ $grey: #878E88;
 
 body {
   background-color: $yellow;
+  padding-bottom: 20px;
 }
 
 h1 {

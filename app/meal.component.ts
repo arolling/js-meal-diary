@@ -1,6 +1,8 @@
 import { Component } from 'angular2/core';
 import { Meal } from './meal.model';
-//import * as moment from 'moment';
+//import * as moment_ from './moment';
+//const moment:moment.MomentStatic = (<any>moment_)['default'] || moment_;
+
 
 @Component({
   selector: 'display-meal',
