@@ -12,6 +12,12 @@ $grey: #878E88;
   }
 }
 
+.btn-default {
+  background-color: $grey;
+  color: $seafoam;
+  float: right;
+}
+
 .list-group-item {
   background-color: $seafoam;
 }
@@ -27,6 +33,7 @@ h1 {
 .form-control {
   background-color: $seafoam;
   color: $yellow;
+  margin-bottom: 10px;
 }
 
 .editable {
